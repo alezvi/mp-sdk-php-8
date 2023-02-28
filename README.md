@@ -1,54 +1,20 @@
 # Mercado Pago SDK for PHP
 
-[![Latest Stable Version](https://poser.pugx.org/mercadopago/dx-php/v/stable)](https://packagist.org/packages/mercadopago/dx-php)
-[![Total Downloads](https://poser.pugx.org/mercadopago/dx-php/downloads)](https://packagist.org/packages/mercadopago/dx-php)
-[![License](https://poser.pugx.org/mercadopago/dx-php/license)](https://packagist.org/packages/mercadopago/dx-php)
+This package is just an adaptation for PHP 8 and PSR 4 compliance.
+
+Functionality remains as in official package, nothing more has been changed, just the syntax.
+
+PHP 8.0.* is required.
 
 This library provides developers with a simple set of bindings to help you integrate Mercado Pago API to a website and start receiving payments.
 
 ## 💡 Requirements
 
-PHP 5.6, 7.1 or higher
+PHP 8.0 or higher
 
 ## 💻 Installation 
 
-First time using Mercado Pago? Create your [Mercado Pago account](https://www.mercadopago.com), if you don’t have one already.
-
-1. Download [Composer](https://getcomposer.org/doc/00-intro.md) if not already installed
-
-2. On your project directory run on the command line
-`composer require "mercadopago/dx-php:2.5.3"` for PHP7 or `composer require "mercadopago/dx-php:1.12.5"` for PHP5.6.
-
-3. Copy the access_token in the [credentials](https://www.mercadopago.com/mlb/account/credentials) section of the page and replace YOUR_ACCESS_TOKEN with it.
-
-That's it! Mercado Pago SDK has been successfully installed.
-
-## 🌟 Getting Started
-  
-  Simple usage looks like:
-
-```php
-  <?php
-    require_once 'vendor/autoload.php'; // You have to require the library from your Composer vendor folder
-
-    MercadoPago\SDK::setAccessToken("YOUR_ACCESS_TOKEN"); // Either Production or SandBox AccessToken
-
-    $payment = new MercadoPago\TestsPayment();
-    
-    $payment->transaction_amount = 141;
-    $payment->token = "YOUR_CARD_TOKEN";
-    $payment->description = "Ergonomic Silk Shirt";
-    $payment->installments = 1;
-    $payment->payment_method_id = "visa";
-    $payment->payer = array(
-      "email" => "larue.nienow@email.com"
-    );
-
-    $payment->save();
-
-    echo $payment->status;
-  ?>
-```
+`composer require "composer require alezvi/mp-sdk-php-8".
 
 ## 📚 Documentation 
 
@@ -61,11 +27,10 @@ Check [our official code reference](https://www.mercadopago.com.br/developers/pt
 
 ## ❤️ Support 
 
-If you require technical support, please contact our support team at [developers.mercadopago.com](https://developers.mercadopago.com)
+If you require **official** technical support, please contact Mercado Pago support team at [developers.mercadopago.com](https://developers.mercadopago.com)
 
 ## 🏻 License 
 
 ```
-MIT license. Copyright (c) 2018 - Mercado Pago / Mercado Libre 
 For more information, see the LICENSE file.
 ```
