@@ -1,0 +1,51 @@
+{
+    "name": "mercadopago/dx-php",
+    "description": "Mercado Pago PHP 8 SDK",
+    "keywords": [
+        "Mercado Pago",
+        "Mercado Pago PHP 8",
+        "MP SDK"
+    ],
+    "type": "library",
+    "homepage": "https://github.com/alezvi/mp-sdk-php-8",
+    "license": "MIT",
+    "version": "2.5.3",
+    "config": {
+        "platform": {
+            "php": "8.0"
+        }
+    },
+    "require": {
+        "php": ">=8",
+        "doctrine/common": "^2.6 || ^3.0",
+        "doctrine/annotations": "^1.8",
+        "ext-curl": "*"
+    },
+    "require-dev": {
+        "symfony/yaml": "~2.5",
+        "phpmd/phpmd": "@stable",
+        "squizlabs/php_codesniffer": "2.8.1",
+        "sebastian/phpcpd": "*",
+        "doctrine/orm": "~2.3",
+        "vlucas/phpdotenv": "^2.5",
+        "phpunit/phpunit": "^9.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "MercadoPago\\": "src\\MercadoPago",
+            "MercadoPago\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit --testdox --colors=auto tests"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packagist.org"
+        },
+        {
+            "packagist": false
+        }
+    ]
+}
